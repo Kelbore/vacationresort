@@ -7,79 +7,94 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Document</title>
-    <scrip src="scripts/index.js"></scrip>
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="scripts/index.js"></script>
 </head>
-<body>
+<body class="bg-dark">
     <div>
-        <nav class="navbar bg-dark">
-          <a href="homepage.html">Home</a>
-          <a href="overnightstay.html">overnightstay</a> 
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="homepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="overnightstay.html">Overnight Stay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Dining</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Rent Car</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Activities</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="jumbotron container">
-   
+    <div class="jumbotron container bg-info mt-3">
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <label for="firstName">First name</label><br>
                 <input type="text" id="firstName" name="firstName"><br>
                 <label for="lastName">Last name</label><br>
                 <input type="text" id="lastName" name="lastName"><br>
-            </div>
-            <div class="col-6">
                 <label for="email">Email</label><br>
                 <input type="email" id="email" name="email"><br>
                 <label for="checkInDate">check-in date</label><br>
-                <input type="date" id="checkInDate" name="checkInDate"><br>
+                <input type="date" class="mb-3" id="checkInDate" name="checkInDate"><br>
             </div>
+            <div class="col-4">
+              <label for="numberOfAdults">Choose number of adults</label><br>
+              <input type="number" id="numberOfAdults" name="numberOfAdults" min="1" max="4"><br>
+              <label for="numberOfChildrens">Choose number of childrens</label><br>
+              <input type="number" id="numberOfChildrens" name="numberOfChildrens" min="0" max="4"><br>
+              <label for="numberOfNights">Number of nights to stay</label><br>
+              <input type="number" id="numberOfNights" class="mb-3" name="numberOfNights" min="1" max="28" required>
             </div>
-            <div class="row">
-              <div class="col">
-                    <label for="numberOfNights">Number of nights to stay</label><br>
-                    <input type="number" id="numberOfNights" class="mb-3" name="numberOfNights" min="1" max="28" required><br> 
-              </div>
+            <div class="col-4">
+              <label for="originalCost">The original room cost:</label><br>
+              <input type="number" id="originalCost" name="originalCost" placeholder="Original cost"><br>
+              <label for="discount">The discount:</label><br>
+              <input type="number" id="discount" name="discount" placeholder="Discount"><br>
+              <label for="discountedCost">The discounted room cost:</label><br>
+              <input type="number" id="discountedCost" name="discountedCost" placeholder="Discounted room cost"><br>
+              <label for="theTax">The tax:</label><br>
+              <input type="number" id="theTax" name="theTax" placeholder="The tax"><br>
+              <label for="costOfStay">The total cost of the stay:</label><br>
+              <input type="number" id="costOfStay" name="costOfStay" placeholder="The total cost of the stay">
+            </div>
             </div>
             
           <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <input type="radio" id="queenSize" name="bed">
                 <label for="queenSize">Queen</label><br> 
                 <input type="radio" id="kingSize" name="bed">
                 <label for="kingSize">King</label><br>
-                <input type="radio" id="2-bedroomSuite" name="bed">
-                <label for="2-bedroomSuite">2-Bedroom Suit</label><br>
+                <input type="radio" id="twoBedRoomSuite" name="bed">
+                <label for="twoBedRoomSuite">Two Bedroom Suit</label><br>
               </div>  
-              <div class="col-6">
-                <label for="numberOfAdults">Choose number of adults</label><br>
-                <input type="number" id="numberOfAdults" name="numberOfAdults" min="1" max="4"><br>
-                <label for="numberOfChildrens">Choose number of childrens</label><br>
-                <input type="number" id="numberOfChildrens" name="numberOfChildrens" min="0" max="4">
-              </div>
+              <div class="col-4">
+                <input type="radio" id="noDiscount" name="discount">
+                <label for="noDiscount">None</label><br>
+                <input type="radio" id="seniorDiscount" name="discount">
+                <label for="seniorDiscount">AAA/Senior(10%)</label><br>
+                <input type="radio" id="militaryDiscount" name="discount">
+                <label for="militaryDiscount">Military(20%)</label>
+              </div>  
           </div>
-          
-          <div class="row mb-3">
-            <div class="col">
-            <input type="radio" id="noDiscount" name="discount">
-            <label for="noDiscount">None</label><br>
-            <input type="radio" id="seniorDiscount" name="discount">
-            <label for="seniorDiscount">AAA/Senior(10%)</label><br>
-            <input type="radio" id="militaryDiscount" name="discount">
-            <label for="militaryDiscount">Military(20%)</label>
-          </div>
-          </div>
+
           <div class="row">
             <div class="col">
                 <a class="btn btn-primary btn-lg mb-3" id="calculateBtn" href="#" role="button">Calculate</a><br>
                 <hr>
-                <label for="originalCost">The original room cost:</label>
-                <input type="number" id="originalCost" name="originalCost"><br>
-                <label for="discount">The discount:</label>
-                <input type="number" id="discount" name="discount"><br>
-                <label for="discountedCost">The discounted room cost:</label>
-                <input type="number" id="discountedCost" name="discountedCost"><br>
-                <label for="theTax">The tax:</label>
-                <input type="number" id="theTax" name="theTax"><br>
-                <label for="costOfStay">The total cost of the stay:</label>
-                <input type="number" id="costOfStay" name="costOfStay">
+             
             </div>
           </div>     
     </div>            
